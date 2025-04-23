@@ -1,0 +1,94 @@
+export const AbiType = [
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "gameData",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "choiceP1",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "numberP1",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "numberP2",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "lastWinner",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "newChoice",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "numberP1",
+        "type": "uint8"
+      }
+    ],
+    "name": "initGame",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "lastGameData",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "choiceP1",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "numberP1",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "numberP2",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "lastWinner",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "numberP2",
+        "type": "uint8"
+      }
+    ],
+    "name": "playGame",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
