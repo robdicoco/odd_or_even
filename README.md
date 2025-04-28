@@ -3,10 +3,13 @@
 The **OddEvenGame** is a simple Ethereum-based smart contract game where two players compete to guess whether the sum of their chosen numbers will be odd or even. Player 1 initializes the game by choosing "Odd" or "Even" and providing a number between 1 and 10. Player 2 then chooses a number, and the winner is determined based on the parity of the sum.
 
 This project includes:
-- A Solidity smart contract (`OddEvenGame.sol`) implementing the game logic.
-- A Hardhat-based testing suite (`test/OddEvenGame.ts`) with comprehensive unit tests.
-- An interaction script (`scripts/interact.ts`) to demonstrate basic actions on the contract.
-- ABI file (`scripts/oddEvenGame.abi.json`) for interacting with the deployed contract.
+- A Solidity smart contract (`contracts/OddEvenGame.sol`) implementing the game logic.
+- A Hardhat development environment configured via `hardhat.config.ts` for local and custom network deployments.
+- TypeScript configuration (`tsconfig.json`) and generated TypeChain types (`typechain-types/`).
+- Comprehensive unit tests (`test/OddEvenGame.ts`) using Hardhat and Chai.
+- Deployment scripts (`scripts/deploy.ts`) and Hardhat Ignition modules (`ignition/modules/OddEvenGame.ts`) for contract deployment.
+- An interaction script (`scripts/interact.ts`) and ABI file (`scripts/oddEvenGame.abi.json`) for contract interaction.
+- Useful npm scripts for testing, deployment, interaction, linting, and coverage.
 
 ---
 
@@ -79,12 +82,27 @@ npm install
 npx hardhat node
 ```
     
-4.  **Compile the Contract** : Compile the Solidity contract:
+4. **Compile the Contract** : Compile the Solidity contract:
     
 ```bash
 npx hardhat compile
 ```
-   
+
+5. **Generate TypeScript Types** : Generate TypeScript types from the compiled contract artifacts:
+    
+```bash
+npm run typechain
+```
+
+6. **Available Scripts**:
+- `npm run test` – Run the test suite.
+- `npm run lint` – Lint the codebase.
+- `npm run coverage` – Generate a test coverage report.
+- `npm run deploy:local` – Deploy the contract on a local network.
+- `npm run interact:local` – Run the interaction script against the local deployment.
+- `npm run deploy:ign` – Deploy the contract using Hardhat Ignition modules.
+- `npm run clean` – Remove Hardhat artifacts.
+- `npm run clean:all` – Remove all build and TypeChain artifacts.
 
 ----------
 
